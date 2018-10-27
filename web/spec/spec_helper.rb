@@ -2,6 +2,7 @@ require 'rack/test'
 require 'rspec'
 require 'simplecov'
 require 'ruby-prof'
+require 'vcr'
 
 SimpleCov.start
 
@@ -21,6 +22,12 @@ RSpec.configure do | config |
   config.color = true
   config.tty   = true
   config.formatter =  :documentation
+end
+
+VCR.configure do |c|
+    c.cassette_library_dir = 'spec/cassettes'
+    c.hook_into :webmock
+    c.configure_rspec_metadata!
 end
 
 def start_profiling

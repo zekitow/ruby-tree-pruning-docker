@@ -114,6 +114,7 @@ GEM
     tilt (2.0.8)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
+    vcr (4.0.0)
     webmock (3.4.2)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
@@ -140,6 +141,7 @@ DEPENDENCIES
   simplecov
   sinatra (~> 2.0.3)
   sinatra-contrib
+  vcr (~> 4.0)
   webmock
 
 BUNDLED WITH

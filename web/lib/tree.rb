@@ -4,7 +4,7 @@ class Tree
 
   def self.api
     Faraday.new(url: BASE) do |faraday|
-      faraday.response :logger
+      faraday.response :logger if $env != :test
       faraday.headers['Content-Type'] = 'application/json'
       faraday.adapter Faraday.default_adapter
     end

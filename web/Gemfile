@@ -6,6 +6,7 @@ gem 'rake', '~> 10.3'
 gem 'sinatra', '~> 2.0.3'
 gem 'sinatra-contrib'
 gem 'faraday'
+gem 'vcr', '~> 4.0'
 gem 'json'
 gem 'rack-parser', :require => 'rack/parser'
 
