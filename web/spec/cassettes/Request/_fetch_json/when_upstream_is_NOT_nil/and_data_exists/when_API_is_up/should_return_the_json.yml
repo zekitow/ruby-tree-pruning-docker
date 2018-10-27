@@ -27,23 +27,23 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Sat, 27 Oct 2018 14:34:42 GMT
+      - Sat, 27 Oct 2018 14:44:20 GMT
       X-Amzn-Requestid:
-      - 714d5aff-d9f5-11e8-97ae-a3f379dc3e43
+      - c974feea-d9f6-11e8-abb0-3d3733afb380
       Access-Control-Allow-Origin:
       - "*"
       X-Amzn-Remapped-Content-Length:
       - '64634'
       X-Amz-Apigw-Id:
-      - PbecZFgiIAMFsFg=
+      - Pbf2nH5kIAMFwDg=
       X-Amzn-Trace-Id:
-      - Root=1-5bd47782-c0a9d90d57d27255b6bf4fcc;Sampled=0
+      - Root=1-5bd479c3-dc29a55a6a65fc26ac3ee798;Sampled=0
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 1cb67cd3abeb0e7aed62661c09da148f.cloudfront.net (CloudFront)
+      - 1.1 968746cc3a51018f794cb1d0e57b6959.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - 5TPXcBXi7kHYPZFIx0YO9utW7xDWO1XZB1BssL8hpgxSgnOxkPwoPg==
+      - S1RKyqRsjR075PXfnYo7PBH5CFzyad25gUNSyvoY-CyKfnKSHzb8bQ==
     body:
       encoding: UTF-8
       string: "[\n  {\n    \"id\": 1, \n    \"name\": \"Urban Extent\", \n    \"sub_themes\":
@@ -942,5 +942,5 @@ http_interactions:
         \"(thickness scale  0\\u20131)\"\n          }\n        ], \n        \"id\":
         42, \n        \"name\": \"Pollution\"\n      }\n    ]\n  }\n]\n"
     http_version: 
-  recorded_at: Sat, 27 Oct 2018 14:34:43 GMT
+  recorded_at: Sat, 27 Oct 2018 14:44:20 GMT
 recorded_with: VCR 4.0.0

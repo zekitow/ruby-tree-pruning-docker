@@ -17,6 +17,104 @@ http_interactions:
       - "*/*"
   response:
     status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Content-Type:
+      - text/html; charset=utf-8
+      Content-Length:
+      - '48'
+      Connection:
+      - keep-alive
+      Date:
+      - Sat, 27 Oct 2018 15:07:25 GMT
+      X-Amzn-Requestid:
+      - 03554027-d9fa-11e8-9a28-599544893a0e
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Amzn-Remapped-Content-Length:
+      - '48'
+      X-Amz-Apigw-Id:
+      - PbjPHEWoIAMFa3Q=
+      X-Amzn-Trace-Id:
+      - Root=1-5bd47f2d-f4e322688682a57838d97a5d;Sampled=0
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 2e92b6c08d7d34d4be9cc42c82d17530.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - 29irii_7oXpF_mjmY3ZeqiHWGiMUw7DjKY9vUT0EOyCcUxa_gP_8XA==
+    body:
+      encoding: UTF-8
+      string: Internal derper error. Nobody has been notified.
+    http_version: 
+  recorded_at: Sat, 27 Oct 2018 15:07:25 GMT
+- request:
+    method: get
+    uri: https://kf6xwyykee.execute-api.us-east-1.amazonaws.com/production/tree/input
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v0.15.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Content-Type:
+      - text/html; charset=utf-8
+      Content-Length:
+      - '48'
+      Connection:
+      - keep-alive
+      Date:
+      - Sat, 27 Oct 2018 15:07:26 GMT
+      X-Amzn-Requestid:
+      - 040fdd16-d9fa-11e8-83b7-0fe75df8182a
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Amzn-Remapped-Content-Length:
+      - '48'
+      X-Amz-Apigw-Id:
+      - PbjPUHZUIAMFqNg=
+      X-Amzn-Trace-Id:
+      - Root=1-5bd47f2e-a60f58dc8af3adf8119f019c;Sampled=0
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 19481a5e29c009b4d2f2fe61ca1ebea2.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - 42D7j0ZiByYZlCEVAKI0wuRE5GfOPeShF5476e8vdprgiOTxPJJqxQ==
+    body:
+      encoding: UTF-8
+      string: Internal derper error. Nobody has been notified.
+    http_version: 
+  recorded_at: Sat, 27 Oct 2018 15:07:26 GMT
+- request:
+    method: get
+    uri: https://kf6xwyykee.execute-api.us-east-1.amazonaws.com/production/tree/input
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v0.15.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
       code: 200
       message: OK
     headers:
@@ -27,23 +125,23 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Sat, 27 Oct 2018 14:34:42 GMT
+      - Sat, 27 Oct 2018 15:07:27 GMT
       X-Amzn-Requestid:
-      - 714d5aff-d9f5-11e8-97ae-a3f379dc3e43
+      - 04a53f6f-d9fa-11e8-8cc7-3576e792182e
       Access-Control-Allow-Origin:
       - "*"
       X-Amzn-Remapped-Content-Length:
       - '64634'
       X-Amz-Apigw-Id:
-      - PbecZFgiIAMFsFg=
+      - PbjPdGz7oAMF4Ag=
       X-Amzn-Trace-Id:
-      - Root=1-5bd47782-c0a9d90d57d27255b6bf4fcc;Sampled=0
+      - Root=1-5bd47f2f-f687450010f15c8023121b80;Sampled=0
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 1cb67cd3abeb0e7aed62661c09da148f.cloudfront.net (CloudFront)
+      - 1.1 d4b559c7a802e820bda33674fddb5174.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - 5TPXcBXi7kHYPZFIx0YO9utW7xDWO1XZB1BssL8hpgxSgnOxkPwoPg==
+      - p0J0JugP-vnExAFNbV_krmm9qx_gT7T31ThGe8IYnrEim-X_T9z3tQ==
     body:
       encoding: UTF-8
       string: "[\n  {\n    \"id\": 1, \n    \"name\": \"Urban Extent\", \n    \"sub_themes\":
@@ -942,5 +1040,5 @@ http_interactions:
         \"(thickness scale  0\\u20131)\"\n          }\n        ], \n        \"id\":
         42, \n        \"name\": \"Pollution\"\n      }\n    ]\n  }\n]\n"
     http_version: 
-  recorded_at: Sat, 27 Oct 2018 14:34:43 GMT
+  recorded_at: Sat, 27 Oct 2018 15:07:28 GMT
 recorded_with: VCR 4.0.0

@@ -17,28 +17,32 @@ describe Request do
       context "and data exists", :vcr do
         let(:upstream) { "non-existent" }
 
-        it "should return 404 status" do
-          status = subject[1]
-          expect(status).to eq(404)
-        end
-
-        it "should return error description" do
-          body = subject[0]
-          expect(body).to eq({ "error" => "Can't find that tree" })
+        it "should return 404 status and error description" do
+          expect(subject).to eq([{ "error" => "Can't find that tree" }, 404])
         end
       end
 
       context "and data exists", :vcr do
         let(:upstream) { "input" }
 
-        it "should return 200 status" do
-          status = subject[1]
-          expect(status).to eq(200)
+        context "when API is up" do
+          it "should return 200 status and items" do
+            response = subject
+            body   = response[0]
+            status = response[1]
+            expect(status).to eq(200)
+            expect(body.count).to eq(12)
+          end
         end
 
-        it "should return the json" do
-          body = subject[0]
-          expect(body).to_not be_empty
+        context "and API raises an internal error", :vcr do
+          it "should retry GET" do
+            response = subject
+            body     = response[0]
+            status   = response[1]
+            expect(status).to eq(200)
+            expect(body.count).to eq(12)
+          end
         end
       end
     end

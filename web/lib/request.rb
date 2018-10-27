@@ -7,8 +7,17 @@ class Request
     #
     def fetch_json(upstream)
       raise ArgumentError.new("Upstream is required.") if upstream.nil?
-      response = api.get(upstream)
-      [JSON.parse(response.body), response.status]
+
+
+      begin
+
+        retries ||= 0
+        response = api.get(upstream)
+        [JSON.parse(response.body), response.status]
+
+      rescue JSON::ParserError => e
+        retry if (retries += 1) < 3
+      end
     end
 
     def api

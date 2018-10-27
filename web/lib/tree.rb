@@ -3,10 +3,10 @@ class Tree
   BASE = "https://kf6xwyykee.execute-api.us-east-1.amazonaws.com/production/tree"
 
   def self.api
-    Faraday.new(url: BASE) do |faraday|
-      faraday.response :logger if $env != :test
-      faraday.headers['Content-Type'] = 'application/json'
-      faraday.adapter Faraday.default_adapter
+    Faraday.new(url: BASE) do |conn|
+      conn.response :logger if $env != :test
+      conn.headers['Content-Type'] = 'application/json'
+      conn.adapter Faraday.default_adapter
     end
   end
 end
