@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  ruby:
+    image: tree_pruning/ruby
+    environment:
+      RACK_ENV: ${RACK_ENV}
+      APP_HOME: /web
+    build: 
+      context: ./ruby
+    entrypoint: /usr/src/ruby-entrypoint.sh
+    volumes:
+      - ./web:/web:cached
+      - ./ruby/bundle_cache:/bundle:cached
+    ports:
+      - "3000:3000"
+    restart: always
