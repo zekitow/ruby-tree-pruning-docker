@@ -2,8 +2,8 @@ require "./spec/spec_helper"
 
 describe Request do
 
-  describe ".fetch_json" do
-    subject { Request.fetch_json(upstream) }
+  describe ".get" do
+    subject { Request.get(upstream) }
     
     context "when upstream is nil" do
       let(:upstream) { nil }
