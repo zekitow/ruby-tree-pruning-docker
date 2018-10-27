@@ -12,9 +12,12 @@ class Request
 
         retries ||= 0
         response = api.get(upstream)
-        return [JSON.parse(response.body), response.status]
+        return OpenStruct.new(
+          status: response.status,
+          content: JSON.parse(response.body))
 
       rescue JSON::ParserError => e
+        # TODO: Move retry to applicaiton.yml
         retry if (retries += 1) < 3
       end
     end

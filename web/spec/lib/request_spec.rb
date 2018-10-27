@@ -18,7 +18,9 @@ describe Request do
         let(:upstream) { "non-existent" }
 
         it "should return 404 status and error description" do
-          expect(subject).to eq([{ "error" => "Can't find that tree" }, 404])
+          response = subject
+          expect(response.status).to eq(404)
+          expect(response.content).to eq({ "error" => "Can't find that tree" })
         end
       end
 
@@ -28,20 +30,16 @@ describe Request do
         context "when API is up" do
           it "should return 200 status and items" do
             response = subject
-            body   = response[0]
-            status = response[1]
-            expect(status).to eq(200)
-            expect(body.count).to eq(12)
+            expect(response.status).to eq(200)
+            expect(response.content.count).to eq(12)
           end
         end
 
         context "and API raises an internal error", :vcr do
           it "should retry GET" do
             response = subject
-            body     = response[0]
-            status   = response[1]
-            expect(status).to eq(200)
-            expect(body.count).to eq(12)
+            expect(response.status).to eq(200)
+            expect(response.content.count).to eq(12)
           end
         end
       end
