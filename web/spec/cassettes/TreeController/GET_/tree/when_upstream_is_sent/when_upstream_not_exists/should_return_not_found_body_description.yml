@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://kf6xwyykee.execute-api.us-east-1.amazonaws.com/production/tree/non-existent-upstream
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v0.15.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '38'
+      Connection:
+      - keep-alive
+      Date:
+      - Sun, 28 Oct 2018 22:22:13 GMT
+      X-Amzn-Requestid:
+      - eb253562-daff-11e8-8dfa-1951683da5e9
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Amzn-Remapped-Content-Length:
+      - '38'
+      X-Amz-Apigw-Id:
+      - Pf13TFuOIAMFa4w=
+      X-Amzn-Trace-Id:
+      - Root=1-5bd63695-7042510a72bea17c11b88529;Sampled=0
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 827cb37a93b8d9106f991ba8541742e4.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - my6_MR0oBr8Qw2HogRDco9coGZGjXdnoyNCzv69-21sTrKBHH5YuEQ==
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "error": "Can't find that tree"
+        }
+    http_version: 
+  recorded_at: Sun, 28 Oct 2018 22:22:13 GMT
+recorded_with: VCR 4.0.0

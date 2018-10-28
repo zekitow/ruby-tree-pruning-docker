@@ -20,7 +20,7 @@ class App < Sinatra::Base
   }
 
   use HomeController
-  # use API::AuthController
+  use TreeController
 
   run! if app_file == $0
 end

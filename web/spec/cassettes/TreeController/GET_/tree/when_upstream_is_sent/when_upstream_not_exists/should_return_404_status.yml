@@ -1,0 +1,104 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://kf6xwyykee.execute-api.us-east-1.amazonaws.com/production/tree/non-existent-upstream
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v0.15.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Content-Type:
+      - text/html; charset=utf-8
+      Content-Length:
+      - '48'
+      Connection:
+      - keep-alive
+      Date:
+      - Sun, 28 Oct 2018 22:21:46 GMT
+      X-Amzn-Requestid:
+      - d9d12d10-daff-11e8-8794-291be3d3812f
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Amzn-Remapped-Content-Length:
+      - '48'
+      X-Amz-Apigw-Id:
+      - Pf1ywFnjoAMFQPg=
+      X-Amzn-Trace-Id:
+      - Root=1-5bd63678-fc71c030b430d5ccf7dcb87c;Sampled=0
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 d82cf532ed9608d406fad9411438b499.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - 8_xXeD8GuBu8n-cvicENTi6UvGjF9hNIIFvKoqcGmWJWjfnG6nhGPA==
+    body:
+      encoding: UTF-8
+      string: Internal derper error. Nobody has been notified.
+    http_version: 
+  recorded_at: Sun, 28 Oct 2018 22:21:46 GMT
+- request:
+    method: get
+    uri: https://kf6xwyykee.execute-api.us-east-1.amazonaws.com/production/tree/non-existent-upstream
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v0.15.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '38'
+      Connection:
+      - keep-alive
+      Date:
+      - Sun, 28 Oct 2018 22:21:47 GMT
+      X-Amzn-Requestid:
+      - dbad3f83-daff-11e8-9905-6700dbb08ca9
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Amzn-Remapped-Content-Length:
+      - '38'
+      X-Amz-Apigw-Id:
+      - Pf1zPGcAoAMFtqg=
+      X-Amzn-Trace-Id:
+      - Root=1-5bd6367b-4ea8d8e5854e0c8467066bff;Sampled=0
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 d82cf532ed9608d406fad9411438b499.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - 4B_ganPc8BZyjR8_A4gGjXtqc22Z__XRFzV7qG4wqlbNwu985T59Ew==
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "error": "Can't find that tree"
+        }
+    http_version: 
+  recorded_at: Sun, 28 Oct 2018 22:21:47 GMT
+recorded_with: VCR 4.0.0

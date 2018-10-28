@@ -20,7 +20,7 @@ describe Request do
         it "should return 404 status and error description" do
           response = subject
           expect(response.status).to eq(404)
-          expect(response.content.error).to eq("Can't find that tree")
+          expect(response.content[:error]).to eq("Can't find that tree")
         end
       end
 

@@ -11,7 +11,8 @@ describe TreeService do
       let(:upstream)   { "input" }
   
       it "should return all data from API", :vcr do
-        expect(subject.count).to eq(12)
+        expect(subject.content.count).to eq(12)
+        expect(subject.status).to eq(200)
       end
     end
     
@@ -20,7 +21,8 @@ describe TreeService do
       let(:upstream)   { 'input' }
   
       it "should filter data from API according to indicators", :vcr do
-        expect(subject.count).to eq(3)
+        expect(subject.content.count).to eq(3)
+        expect(subject.status).to eq(200)
       end
     end
   end
