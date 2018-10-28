@@ -3,6 +3,7 @@ require 'rspec'
 require 'simplecov'
 require 'ruby-prof'
 require 'vcr'
+require './spec/support/json_helper'
 
 SimpleCov.start
 

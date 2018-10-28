@@ -1,0 +1,84 @@
+[
+    {
+      "id": 1,
+      "name": "Urban Extent",
+      "sub_themes": [
+        {
+          "id": 1,
+          "name": "Administrative",
+          "categories": [
+            {
+              "id": 1,
+              "indicators": [
+                {
+                  "id": 299,
+                  "name": "Total"
+                }
+              ],
+              "name": "Area",
+              "unit": "(sq. km.)"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Built up",
+          "categories": [
+            {
+              "id": 4,
+              "indicators": [
+                {
+                  "id": 302,
+                  "name": "Total"
+                }
+              ],
+              "name": "Area",
+              "unit": "(sq. km.)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Demographics",
+      "sub_themes": [
+        {
+          "id": 4,
+          "name": "Births and Deaths",
+          "categories": [
+            {
+              "id": 10,
+              "indicators": [
+                {
+                  "id": 308,
+                  "name": "Total"
+                }
+              ],
+              "name": "Crude birth rate",
+              "unit": "(live births per 1000 people)"
+            },
+            {
+              "id": 11,
+              "indicators": [
+                {
+                  "id": 1,
+                  "name": "total"
+                },
+                {
+                  "id": 2,
+                  "name": "male"
+                },
+                {
+                  "id": 3,
+                  "name": "female"
+                }
+              ],
+              "name": "Crude death rate",
+              "unit": "(deaths per 1000 people)"
+            }
+          ]
+        }
+      ]
+    }
+]

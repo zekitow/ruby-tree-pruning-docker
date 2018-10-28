@@ -14,7 +14,7 @@ class Request
         response = api.get(upstream)
         return OpenStruct.new(
           status: response.status,
-          content: JSON.parse(response.body))
+          content: JSON.parse(response.body, object_class: OpenStruct))
 
       rescue JSON::ParserError => e
         # TODO: Move retry to applicaiton.yml
