@@ -27,7 +27,7 @@ describe TreeService do
     end
   end
 
-  describe "#delete_non_matching_by_indicator_ids!" do
+  describe "#filter_response_by_indicator_ids!" do
     subject do 
       TreeService.new(indicator_ids: indicators)
     end
@@ -36,12 +36,12 @@ describe TreeService do
     let(:content)    { load_object_from_json("sample","fake_response") }
 
     it "should return only the matched nodes" do
-      subject.delete_non_matching_by_indicator_ids!(content)
+      subject.filter_response_by_indicator_ids!(content)
       expect(content.collect(&:name)).to eq(["Urban Extent", "Demographics"])
     end
 
     it "should return only the matched sub themes" do
-      subject.delete_non_matching_by_indicator_ids!(content)
+      subject.filter_response_by_indicator_ids!(content)
       sub_themes = content.flat_map(&:sub_themes)
                           .flat_map(&:name)
 
@@ -49,7 +49,7 @@ describe TreeService do
     end
 
     it "should return only the matched categories" do
-      subject.delete_non_matching_by_indicator_ids!(content)
+      subject.filter_response_by_indicator_ids!(content)
       categories = content.flat_map(&:sub_themes)
                           .flat_map(&:categories)
                           .flat_map(&:id)
@@ -58,7 +58,7 @@ describe TreeService do
     end
 
     it "should return only the matched indicators" do
-      subject.delete_non_matching_by_indicator_ids!(content)
+      subject.filter_response_by_indicator_ids!(content)
       indicators = content.flat_map(&:sub_themes)
                           .flat_map(&:categories)
                           .flat_map(&:indicators)

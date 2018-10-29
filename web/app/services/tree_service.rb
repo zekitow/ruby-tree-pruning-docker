@@ -11,7 +11,7 @@ class TreeService
   #
   def perform
     @response = Request.get(upstream)
-    delete_non_matching_by_indicator_ids!(response.content) if indicator_ids.size > 0
+    filter_response_by_indicator_ids!(response.content) if indicator_ids.size > 0
     validate_response!
     response
   end
@@ -19,7 +19,7 @@ class TreeService
   #
   # Deletes all nodes that doesn't match the "indicator_ids"
   #
-  def delete_non_matching_by_indicator_ids!(content)
+  def filter_response_by_indicator_ids!(content)
     result = content.each do | theme |
       delete_non_matching_on_sub_themes!(theme[:sub_themes])
     end
@@ -28,6 +28,7 @@ class TreeService
   end
 
   private
+  
 
   #
   # Delete if doesn't match on subtheme.
