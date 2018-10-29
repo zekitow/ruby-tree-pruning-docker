@@ -1,6 +1,14 @@
+defaults: &defaults
+  lib:
+    endpoint: https://kf6xwyykee.execute-api.us-east-1.amazonaws.com/production/tree
+    max_retries: 3
+
 development:
-  # empty
+  <<: *defaults
+
 test:
-  # empty
+  <<: *defaults
+
 production:
-  # empty
+  <<: *defaults
+

@@ -8,7 +8,6 @@ class Request
     #
     def get(upstream)
       raise ArgumentError, 'Upstream is required.' if upstream.nil?
-
       retries ||= 0
       response = api.get(upstream)
       OpenStruct.new(
@@ -16,8 +15,8 @@ class Request
         content: JSON.parse(response.body, symbolize_names: true)
       )
     rescue JSON::ParserError
-      # TODO: Move retry to applicaiton.yml
-      retry if (retries += 1) < 3
+      max_retries ||= $configs['lib']['max_retries']
+      retry if (retries += 1) < max_retries
     end
 
     def api

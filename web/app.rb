@@ -1,14 +1,11 @@
 # frozen_string_literal: true
 
 require './config/loaders'
-
 $configs = YAML::load(File.read('./config/application.yml'))[$env.to_s]
-
 require './config/require_all'
 require 'logger'
 
 class App < Sinatra::Base
-
   configure do
     enable :logging
     $logger = Logger.new("#{settings.root}/log/#{settings.environment}.log", 'daily')
