@@ -42,7 +42,7 @@ Finished in 0.12291 seconds (files took 0.38067 seconds to load)
 27 examples, 0 failures
 ```
 
-Now you are able to access the url via [localhost](http://localhost:3000/tree/input)
+Now you are able to access the url via [localhost using "input" upstream](http://localhost:3000/tree/input)
 
 ## API Specification
 ## API /tree/:upstream
@@ -59,7 +59,7 @@ curl -v 'http://127.0.0.1:3000/tree/input?indicator_ids\[\]=2&indicator_ids\[\]=
 ```
 
 Expected return example:
-```json
+```
 [
   {
     "id":2,
