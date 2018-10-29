@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require './config/loaders'
 
 $configs = YAML::load(File.read('./config/application.yml'))[$env.to_s]

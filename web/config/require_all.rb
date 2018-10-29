@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'byebug' if $env != :production
 Dir.glob('./lib/**/**/*.rb').each { |file| load file }
 Dir.glob('./app/{helpers}/**/*.rb').each { |file| load file }

@@ -1,8 +1,9 @@
-class TreeController < ApplicationController
+# frozen_string_literal: true
 
+class TreeController < ApplicationController
   #
   # Endpoint responsible to filter all API data using indicator_ids.
-  # 
+  #
   # Calling example: /tree/input?indicator_ids[]=31&indicator_ids[]=32&indicator_ids[]=1
   #
   get '/tree/?:name?' do

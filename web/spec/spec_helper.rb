@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rack/test'
 require 'rspec'
 require 'simplecov'
@@ -18,11 +20,11 @@ module RSpecMixin
   include Rack::Test::Methods
 end
 
-RSpec.configure do | config |
+RSpec.configure do |config|
   config.include RSpecMixin
   config.color = true
   config.tty   = true
-  config.formatter =  :documentation
+  config.formatter = :documentation
 end
 
 VCR.configure do |c|
@@ -37,5 +39,5 @@ end
 
 def end_profiling
   printer = RubyProf::MultiPrinter.new(RubyProf.stop)
-  printer.print(:path => ".", :profile => "profile")
+  printer.print(path: '.', profile: 'profile')
 end

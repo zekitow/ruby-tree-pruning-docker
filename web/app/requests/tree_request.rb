@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class TreeRequest
   attr_accessor :upstream, :indicator_ids
 

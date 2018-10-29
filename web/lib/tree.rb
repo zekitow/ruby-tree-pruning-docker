@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class Tree
   # TODO: move config to application.yml
-  BASE = "https://kf6xwyykee.execute-api.us-east-1.amazonaws.com/production/tree"
+  BASE = 'https://kf6xwyykee.execute-api.us-east-1.amazonaws.com/production/tree'
 
   def self.api
     Faraday.new(url: BASE) do |conn|
