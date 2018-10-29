@@ -45,4 +45,64 @@ Finished in 0.12291 seconds (files took 0.38067 seconds to load)
 ## API Specification
 ## API /tree
 
-# TODO
+| Param            | Description                                 | Required  | Type     |
+|------------------|---------------------------------------------|-----------|----------|
+| upsteam          | The name of the tree to perform the search  | Yes       | String   |
+| indicator_ids    | The refining indicator ids                  | No        | Arrau  |
+
+### Curl Example
+
+```sh
+curl -v 'http://127.0.0.1:3000/tree/input?indicator_ids\[\]=2&indicator_ids\[\]=3'
+```
+
+Expected return example:
+```json
+[
+  {
+    "id":2,
+    "name":"Demographics",
+    "sub_themes":[
+      {
+        "categories":[
+          {
+            "id":11,
+            "indicators":[
+              {
+                "id":2, // => refined indicator id
+                "name":"male"
+              },
+              {
+                "id":3, // => refined indicator id
+                "name":"female"
+              }
+            ],
+            "name":"Crude death rate",
+            "unit":"(deaths per 1000 people)"
+          }
+        ],
+        "id":4,
+        "name":"Births and Deaths"
+      }
+    ]
+  }
+]
+```
+
+## Extra
+
+IRB docker access:
+```
+cd web
+docker exec -ti rubytreepruningdocker_ruby_1 bundle exec irb -r ./app.rb
+```
+
+Run guard:
+```
+docker exec -ti rubytreepruningdocker_ruby_1 bundle exec guard
+```
+
+Run rspec:
+```
+docker exec -ti rubytreepruningdocker_ruby_1 bundle exec rspec
+```
