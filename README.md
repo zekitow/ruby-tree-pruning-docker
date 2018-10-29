@@ -10,7 +10,7 @@ To make the setup easier to run:
 
 ```sh
 # Clone the repository
-git@github.com:zekitow/ruby-tree-pruning-docker.git
+git clone git@github.com:zekitow/ruby-tree-pruning-docker.git
 cd ruby-tree-pruning-docker
 
 # Build the docker (only needed for the first run)
@@ -42,13 +42,15 @@ Finished in 0.12291 seconds (files took 0.38067 seconds to load)
 27 examples, 0 failures
 ```
 
+Now you are able to access the url via [localhost](http://localhost:3000/tree/input)
+
 ## API Specification
-## API /tree
+## API /tree/:upstream
 
 | Param            | Description                                 | Required  | Type     |
 |------------------|---------------------------------------------|-----------|----------|
 | upsteam          | The name of the tree to perform the search  | Yes       | String   |
-| indicator_ids    | The refining indicator ids                  | No        | Arrau  |
+| indicator_ids    | The refining indicator ids                  | No        | Array    |
 
 ### Curl Example
 
