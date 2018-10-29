@@ -8,25 +8,14 @@ class ApplicationController < Sinatra::Base
   set :views, Proc.new { File.join(root, "views") }
 
   #
-  # Captures all BadRequestError
+  # Captures all NotFoundError
   #
-  error BadRequestError do
+  error NotFoundError do
     $logger.error("Internal server error: #{env['sinatra.error']}")
     $logger.error("PATH: #{request.path}");
     $logger.error("PARAMS: #{params}\n\n");
 
-    halt_with(400, env['sinatra.error'].message)
-  end
-
-  #
-  # Captures all UnauthorizedError
-  #
-  error UnauthorizedError do
-    $logger.error("Unauthorized error: #{env['sinatra.error']}")
-    $logger.error("PATH: #{request.path}");
-    $logger.error("PARAMS: #{params}\n\n");
-
-    halt_with(401, env['sinatra.error'].message)
+    halt_with(404, env['sinatra.error'].message)
   end
 
   #

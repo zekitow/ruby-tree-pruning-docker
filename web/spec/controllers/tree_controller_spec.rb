@@ -13,7 +13,7 @@ describe TreeController do
       end
 
       it "should return not found body description" do
-        expect(subject.body).to eq("{\"status\":404,\"message\":\"Invalid upstream\"}")
+        expect(subject.body).to eq("{\"status\":404,\"message\":\"Invalid upstream.\"}")
       end
     end
 

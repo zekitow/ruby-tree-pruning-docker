@@ -1,5 +1,4 @@
-class UnauthorizedError < StandardError
-
+class NotFoundError < StandardError
   def initialize(msg)
     super(msg)
   end
